@@ -1,0 +1,312 @@
+@media (max-width:1640px) {
+    .header {
+        padding: 16px 16px 268px;
+    }
+
+    .how-works,
+    .why-landscape,
+    .borrowers-wrapper,
+    .investors-wrapper,
+    .reviews,
+    .numbers,
+    .trusted,
+    .unlock-value,
+    .footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .how-works__items {
+        flex-direction: column;
+    }
+
+    .why-landscape__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .borrowers__items {
+        padding-right: 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .numbers__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:1024px) {
+    .header {
+        background-image: url(../img/mobile-bg.jpg);
+        padding: 16px 16px 83px;
+        background-position: top 25% left 0;
+    }
+
+
+    .header__links-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        transition-duration: .5s;
+    }
+
+    .header__navbar {
+        padding: 11px 11px 11px 0;
+        position: relative;
+        margin-bottom: 150px;
+    }
+
+    .header__links-switcher {
+        position: relative;
+        z-index: 11;
+        display: block;
+    }
+
+
+    .header__links {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 0;
+        overflow: hidden;
+        padding: 0;
+        right: -16px;
+        top: -16px;
+        height: 100vh;
+        background-color: #040404;
+        z-index: 10;
+        transition-duration: .5s;
+        gap: 40px;
+    }
+
+    .header__link {
+        opacity: 0;
+        transition-duration: .3s;
+        font-weight: 700;
+    }
+
+    .header__logo {
+        width: 178px;
+    }
+
+    .header__content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .header__title {
+        padding: 0 14px;
+        font-size: 40px;
+        line-height: 47.24px;
+        margin-bottom: 16px;
+    }
+
+    .header__text {
+        padding: 0 14px;
+        font-size: 16px;
+        line-height: 19.36px;
+        margin-bottom: 48px;
+    }
+
+    .how-works {
+        padding-top: 72px;
+        margin-bottom: 104px;
+    }
+
+    .how-works__title,
+    .why-landscape__title,
+    .reviews__title,
+    .numbers__title,
+    .trusted__title,
+    .unlock-value__title {
+        font-size: 32px;
+        line-height: 38.4px;
+        margin-bottom: 40px;
+    }
+
+    .how-works__item {
+        width: 100%;
+        height: 334px;
+    }
+
+    .how-works__item-title {
+        font-size: 24px;
+        line-height: 28.34px;
+        margin-bottom: 16px;
+    }
+
+    .how-works__item-text {
+        font-size: 16px;
+        line-height: 19.36px;
+        margin-bottom: 40px;
+    }
+
+    .how-works__item-links {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .why-landscape__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why-landscape {
+        margin-bottom: 72px;
+    }
+
+    .borrowers__title,
+    .investors__title {
+        font-size: 24px;
+        line-height: 28.34px;
+        margin-bottom: 16px;
+    }
+
+    .borrowers__text,
+    .investors__text {
+        font-size: 16px;
+        line-height: 19.36px;
+        margin-bottom: 32px;
+    }
+
+    .borrowers__items {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .investors {
+        margin-bottom: 104px;
+    }
+
+    .investors__items {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+
+    .investors__item-title {
+        font-size: 18px;
+        line-height: 21.78px;
+    }
+
+    .investors__item-text {
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+
+    .reviews {
+        background-image: url(../img/mobile-bg.jpg);
+        background-position: top 25% left 0;
+        padding: 113px 16px 48px;
+        margin-bottom: 72px;
+    }
+
+    .reviews__slider-wrapper {
+        gap: 14px;
+    }
+
+    .slider-arrow {
+        min-width: 32px;
+        width: 32px;
+        min-height: 32px;
+        height: 32px;
+    }
+
+    .slider-arrow img {
+        width: 20px;
+    }
+
+    .reviews__slide-text {
+        font-size: 14px;
+        line-height: 16.94px;
+    }
+
+    .numbers__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .numbers__item {
+        max-width: 204px;
+        padding: 32px 0;
+        margin: 0 auto;
+    }
+
+    .numbers__item-title {
+        font-size: 24px;
+        line-height: 28.34px;
+        margin-bottom: 24px;
+    }
+
+    .numbers__item-text {
+        font-size: 18px;
+        line-height: 21.78px;
+    }
+
+    .numbers {
+        margin-bottom: 104px;
+    }
+
+    .trusted {
+        margin-bottom: 72px;
+    }
+
+    .trusted__items {
+        grid-template-columns: repeat(2, minmax(129px, 200px));
+        gap: 10px;
+        grid-auto-flow: dense;
+        align-items: center;
+        justify-content: center;
+        column-gap: 32px;
+        row-gap: 24px;
+    }
+
+    .unlock-value {
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-bottom: 36px;
+    }
+
+    .unlock-value__circle {
+        width: 415px;
+        height: 415px;
+        left: calc(50% - 415px/2 + 0.5px);
+    }
+
+    .footer__items .footer__item:nth-child(1) {
+        padding-left: 18px;
+    }
+
+    .footer__items .footer__item:nth-child(2) {
+        padding-right: 18px;
+    }
+
+    .footer__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 32px;
+        align-items: center;
+        justify-content: space-between;
+
+
+    }
+
+    .footer__item:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .footer__item-logo img {
+        max-width: 193px;
+    }
+
+    .link_white,
+    .link_blue,
+    .link_special {
+        padding: 13px 24px;
+    }
+}
