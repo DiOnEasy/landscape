@@ -130,6 +130,7 @@
     .how-works__item {
         width: 100%;
         height: 334px;
+        padding: 32px;
     }
 
     .how-works__item-title {
