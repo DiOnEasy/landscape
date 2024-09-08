@@ -308,5 +308,6 @@
     .link_blue,
     .link_special {
         padding: 13px 24px;
+        text-wrap: nowrap;
     }
 }
