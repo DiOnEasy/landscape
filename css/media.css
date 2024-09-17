@@ -11,7 +11,9 @@
     .numbers,
     .trusted,
     .unlock-value,
-    .footer {
+    .footer,
+    .for-whom,
+    .loan {
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -20,6 +22,17 @@
 @media (max-width: 1280px) {
     .how-works__items {
         flex-direction: column;
+    }
+
+    .for-whom__items {
+        flex-direction: column;
+    }
+
+    .for-whom__item {
+        padding: 32px;
+        width: 100%;
+        height: 557px;
+
     }
 
     .why-landscape__items {
@@ -85,7 +98,6 @@
     .header__link {
         opacity: 0;
         transition-duration: .3s;
-        font-weight: 700;
     }
 
     .header__logo {
@@ -99,6 +111,12 @@
 
     .header__title {
         padding: 0 14px;
+        font-size: 40px;
+        line-height: 47.24px;
+        margin-bottom: 16px;
+    }
+
+    .header__title_smaller {
         font-size: 40px;
         line-height: 47.24px;
         margin-bottom: 16px;
@@ -121,7 +139,8 @@
     .reviews__title,
     .numbers__title,
     .trusted__title,
-    .unlock-value__title {
+    .unlock-value__title,
+    .loan__title {
         font-size: 32px;
         line-height: 38.4px;
         margin-bottom: 40px;
@@ -151,6 +170,28 @@
         align-items: flex-start;
     }
 
+    .for-whom__item-title {
+        font-size: 24px;
+        line-height: 28.34px;
+        margin-bottom: 32px;
+    }
+
+    .for-whom__subitems {
+        gap: 24px;
+    }
+
+    .for-whom__subitem-title {
+        font-size: 18px;
+        line-height: 21.78px;
+    }
+
+    .for-whom__item-text {
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+
+
+
     .why-landscape__items {
         display: flex;
         flex-direction: column;
@@ -158,6 +199,19 @@
 
     .why-landscape {
         margin-bottom: 72px;
+    }
+
+    .loan {
+        margin-bottom: 72px;
+    }
+
+    .loan__item-title {
+        font-size: 18px;
+        line-height: 21.78px;
+    }
+
+    .loan__item-content {
+        gap: 16px;
     }
 
     .borrowers__title,

@@ -29,9 +29,9 @@
 }
 
 :root {
-    --light-blue: #B1C6FF;
-    --blue: #2562FF;
-    --dark-blue: #0045F9;
+    --light-orange: #FFE1DA;
+    --orange: #F65B38;
+    --dark-orange: #F7522D;
     --white: #ffffff;
     --black: #000000;
     --bg-color: #040404;
@@ -63,7 +63,6 @@
 }
 
 .link_white {
-    font-weight: 500;
     text-decoration: none;
     padding: 18.5px 32px;
     display: inline-block;
@@ -73,12 +72,12 @@
 }
 
 .link_white:hover {
-    color: var(--dark-blue);
+    color: var(--dark-orange);
 }
 
 .link_white:focus {
-    color: var(--dark-blue);
-    border: 1px solid var(--blue);
+    color: var(--dark-orange);
+    border: 1px solid var(--orange);
     padding: 17.5px 31px;
 }
 
@@ -87,18 +86,18 @@
     text-decoration: none;
     padding: 18.5px 32px;
     display: inline-block;
-    background: var(--dark-blue);
+    background: var(--dark-orange);
     color: var(--white);
     border-radius: 20px;
 }
 
 .link_blue:hover {
-    background: var(--blue);
+    background: var(--orange);
 }
 
 .link_blue:focus {
-    background: var(--light-blue);
-    color: var(--dark-blue);
+    background: var(--light-orange);
+    color: var(--dark-orange);
 }
 
 .link_special {
@@ -107,12 +106,12 @@
     padding: 18.5px 32px;
     display: inline-block;
     background: var(--white);
-    color: var(--dark-blue);
+    color: var(--dark-orange);
     border-radius: 20px;
 }
 
 .link_special:hover {
-    background: var(--dark-blue);
+    background: var(--dark-orange);
     color: var(--white);
 }
 
@@ -147,9 +146,11 @@ body {
 .header__logo {
     width: 391px;
 }
-.header__logo img{
+
+.header__logo img {
     width: 100%;
 }
+
 .header__links {
     display: flex;
     align-items: center;
@@ -157,6 +158,7 @@ body {
 }
 
 .header__link {
+    font-weight: 400;
     padding: 18.5px 32px;
 }
 
@@ -171,8 +173,18 @@ body {
     line-height: 103.93px;
     text-align: center;
     color: var(--white);
-    max-width: 1305px;
+    max-width: 850px;
     margin: 0 auto 24px;
+}
+
+.header__title_smaller {
+    display: block;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 66.14px;
+    text-align: center;
+    max-width: 375px;
+    margin: 0 auto;
 }
 
 .header__text {
@@ -196,7 +208,7 @@ body {
 
 .how-works {
     max-width: 1600px;
-    margin: 0 auto 160px;
+    margin: 0 auto 72px;
     padding: 112px 0 0 0;
 }
 
@@ -205,7 +217,8 @@ body {
 .reviews__title,
 .numbers__title,
 .trusted__title,
-.unlock-value__title {
+.unlock-value__title,
+.loan__title {
     font-family: 'Euro';
     font-size: 72px;
     font-weight: 700;
@@ -271,8 +284,9 @@ body {
     height: 900px;
     left: calc(50% - 900px/2);
     top: 274px;
-    background: rgba(26, 90, 255, 0.44);
+    background: rgba(246, 91, 56, 0.44);
     filter: blur(149px);
+
 }
 
 .how-works__circle_2 {
@@ -283,12 +297,66 @@ body {
     height: 900px;
     left: calc(50% - 900px/2);
     top: 274px;
-    background: rgba(0, 159, 227, 0.44);
+    background: rgba(246, 181, 56, 0.44);
     filter: blur(149px);
+
+}
+
+.for-whom {
+    max-width: 1600px;
+    margin: 0 auto 160px;
+}
+
+.for-whom__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.for-whom__item {
+    border: 1px solid #FFFFFF40;
+    border-radius: 20px;
+    padding: 56px 48px;
+    color: var(--white);
+    width: 50%;
+    height: 629px;
+}
+
+.for-whom__item-title {
+    font-family: 'Euro';
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47.24px;
+    margin-bottom: 40px;
+}
+
+.for-whom__subitems {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.for-whom__subitem {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.for-whom__item-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+}
+
+.for-whom__subitem-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
 }
 
 .why-landscape {
-    margin: 0 auto 112px;
+    margin: 0 auto 160px;
     max-width: 1600px;
 }
 
@@ -326,6 +394,78 @@ body {
     font-size: 16px;
     line-height: 19.36px;
     color: var(--white);
+}
+
+.loan {
+    max-width: 1600px;
+    margin: 0 auto 112px;
+
+}
+
+.loan__items {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    background: #FFFFFF14;
+    border: 1px solid #FFFFFF40;
+    border-radius: 20px;
+    padding: 56px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loan__circle {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1202.07px;
+    height: 1215.38px;
+    left: calc(50% - 1202.07px/2 + 638.57px);
+    top: -37px;
+    background: rgba(246, 91, 56, 0.25);
+    filter: blur(154.5px);
+    transform: rotate(4.46deg);
+    z-index: 1;
+}
+
+.loan__item:nth-child(1) {
+    max-width: 863px;
+}
+
+.loan__item:nth-child(2) {
+    max-width: 878px;
+}
+
+.loan__item:nth-child(3) {
+    max-width: 832px;
+}
+
+.loan__item:nth-child(4) {
+    max-width: 797px;
+}
+
+.loan__item {
+    display: flex;
+    gap: 16px;
+    z-index: 5;
+    position: relative;
+}
+
+.loan__item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.loan__item-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+}
+
+.loan__item-text {
+    font-size: 16px;
+    line-height: 19.36px;
 }
 
 .borrowers,
@@ -379,7 +519,8 @@ body {
     gap: 16px;
 }
 
-.borrowers__item-icon {
+.borrowers__item-icon,
+.loan__item-icon {
     background: var(--white);
     border-radius: 100px;
     min-width: 48px;
@@ -415,13 +556,13 @@ body {
 .borrowers__circle {
     top: -47px;
     left: calc(50% - 900px/2 + 893px);
-    background: rgba(26, 90, 255, 0.44);
+    background: rgba(246, 91, 56, 0.44);
 }
 
 .investors__circle {
     left: calc(50% - 900px/2 + 852px);
     top: 72px;
-    background: rgba(0, 159, 227, 0.44);
+    background: rgba(246, 181, 56, 0.44);
 }
 
 .investors__items {
@@ -515,7 +656,7 @@ body {
     line-height: 47.24px;
     text-align: center;
     margin-bottom: 32px;
-    background: linear-gradient(90deg, #FFFFFF 0%, #0045F9 148.18%);
+    background: linear-gradient(90.13deg, #FFFFFF 0.12%, #F65B38 165.51%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -574,7 +715,7 @@ body {
     height: 753px;
     left: calc(50% - 753px/2);
     top: 0px;
-    background: rgba(26, 90, 255, 0.32);
+    background: rgba(246, 91, 56, 0.46);
     filter: blur(149px);
     z-index: 1;
 }
