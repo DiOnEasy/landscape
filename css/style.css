@@ -192,7 +192,8 @@ body {
     line-height: 29.05px;
     text-align: center;
     color: var(--white);
-    margin-bottom: 56px;
+    max-width: 850px;
+    margin: 0 auto 56px;
 }
 
 .header__content-links {
