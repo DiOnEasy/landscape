@@ -198,7 +198,7 @@ body {
 
 .header__content-links {
     margin: 0 auto;
-    max-width: 365px;
+    max-width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,7 +219,10 @@ body {
 .numbers__title,
 .trusted__title,
 .unlock-value__title,
-.loan__title {
+.loan__title,
+.metrics__title,
+.cases__title,
+.contact-us__title {
     font-family: 'Euro';
     font-size: 72px;
     font-weight: 700;
@@ -321,7 +324,7 @@ body {
     padding: 56px 48px;
     color: var(--white);
     width: 50%;
-    height: 629px;
+    min-height: 629px;
 }
 
 .for-whom__item-title {
@@ -330,6 +333,11 @@ body {
     font-weight: 700;
     line-height: 47.24px;
     margin-bottom: 40px;
+}
+
+.for-whom__subitem-wrapper {
+    display: flex;
+    gap: 16px;
 }
 
 .for-whom__subitems {
@@ -354,6 +362,55 @@ body {
     font-size: 24px;
     font-weight: 700;
     line-height: 29.05px;
+}
+
+.metrics {
+    max-width: 1600px;
+    margin: 0 auto 160px;
+}
+
+.metrics__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 72px;
+    column-gap: 24px;
+}
+
+.metrics__item {
+    padding: 48px 14px 48px 48px;
+    background: #FFFFFF14;
+    border: 1px solid #FFFFFF40;
+    border-radius: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.metrics__item-icon {
+    background: #FFFFFF24;
+    width: 88px;
+    height: 88px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metrics__item-content {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    color: var(--white);
+}
+
+.metrics__item-title {
+    font-size: 40px;
+    line-height: 48.41px;
+}
+
+.metrics__item-text {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48.41px;
 }
 
 .why-landscape {
@@ -405,13 +462,14 @@ body {
 
 .loan__items {
     color: var(--white);
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 48px;
+    column-gap: 140px;
     background: #FFFFFF14;
     border: 1px solid #FFFFFF40;
     border-radius: 20px;
-    padding: 56px;
+    padding: 56px 80px;
     position: relative;
     overflow: hidden;
 }
@@ -423,26 +481,26 @@ body {
     height: 1215.38px;
     left: calc(50% - 1202.07px/2 + 638.57px);
     top: -37px;
-    background: rgba(246, 91, 56, 0.25);
+    background: rgba(246, 181, 56, 0.16);
     filter: blur(154.5px);
     transform: rotate(4.46deg);
     z-index: 1;
 }
 
 .loan__item:nth-child(1) {
-    max-width: 863px;
+    max-width: 612px;
 }
 
 .loan__item:nth-child(2) {
-    max-width: 878px;
+    max-width: 594px;
 }
 
 .loan__item:nth-child(3) {
-    max-width: 832px;
+    max-width: 610px;
 }
 
 .loan__item:nth-child(4) {
-    max-width: 797px;
+    max-width: 585px;
 }
 
 .loan__item {
@@ -482,7 +540,7 @@ body {
 }
 
 .investors {
-    margin-bottom: 112px;
+    margin-bottom: 160px;
 }
 
 .borrowers__title,
@@ -504,12 +562,16 @@ body {
     color: var(--white);
 }
 
+.investors__item-link {
+    margin-top: 18px;
+}
+
 .borrowers__items {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.1fr 1.1fr;
-    gap: 48px;
+    grid-template-columns: 241px 242px 275px 269px;
     color: var(--white);
-    margin-bottom: 48px;
+    justify-content: space-between;
+    margin-bottom: 190px;
     padding-right: 75px;
 }
 
@@ -518,10 +580,11 @@ body {
     max-height: 437px;
     display: flex;
     gap: 16px;
+    position: relative;
 }
 
-.borrowers__item-icon,
-.loan__item-icon {
+.loan__item-icon,
+.for-whom__subitem-icon {
     background: var(--white);
     border-radius: 100px;
     min-width: 48px;
@@ -543,6 +606,62 @@ body {
     line-height: 19.36px;
 }
 
+
+.borrowers__line {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    bottom: -139px;
+}
+
+.borrowers__item:nth-child(1) .borrowers__line {
+    left: 46px;
+}
+
+.borrowers__item:nth-child(2) .borrowers__line {
+    left: 57px;
+}
+
+.borrowers__item:nth-child(3) .borrowers__line {
+    left: 102px;
+}
+
+.borrowers__item:nth-child(4) .borrowers__line {
+    left: 93px;
+}
+
+
+.borrowers__line::before {
+    content: '';
+    position: absolute;
+    top: -59px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 59px;
+    background-color: #FFFFFF;
+
+}
+
+.borrowers__item:first-child .borrowers__line:after,
+.borrowers__item:last-child .borrowers__line:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 650px;
+    height: 4px;
+    background-color: #FFFFFF;
+}
+
+.borrowers__item:last-child .borrowers__line:after {
+    left: auto !important;
+    right: 100% !important;
+}
+
 .borrowers__circle,
 .investors__circle {
     position: absolute;
@@ -555,8 +674,8 @@ body {
 }
 
 .borrowers__circle {
-    top: -47px;
-    left: calc(50% - 900px/2 + 893px);
+    top: 33px;
+    left: calc(50% - 900px/2 + 916px);
     background: rgba(246, 91, 56, 0.44);
 }
 
@@ -570,6 +689,8 @@ body {
     display: flex;
     gap: 196px;
     margin-bottom: 48px;
+    position: relative;
+    z-index: 5;
 }
 
 .investors__item {
@@ -584,6 +705,37 @@ body {
 }
 
 .investors__item-text {
+    font-size: 18px;
+    line-height: 21.78px;
+}
+
+.cases {
+    max-width: 1600px;
+    margin: 0 auto 160px;
+}
+
+.cases__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.cases__item {
+    background: #FFFFFF14;
+    border-radius: 20px;
+    padding: 40px 20px 40px 32px;
+    height: 366px;
+    color: var(--white);
+}
+
+.cases__item-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    margin-bottom: 24px;
+}
+
+.cases__item-text {
     font-size: 18px;
     line-height: 21.78px;
 }
@@ -691,7 +843,7 @@ body {
 .unlock-value {
     position: relative;
     padding: 180px 0 253px;
-    margin-bottom: 152px;
+    margin-bottom: 112px;
 }
 
 .unlock-value__title {
@@ -721,8 +873,69 @@ body {
     z-index: 1;
 }
 
+.contact-us {
+    max-width: 1600px;
+    margin: 0 auto 112px;
+}
+
+.contact-us__content-wrapper {
+    background: #FFFFFF14;
+    border-radius: 20px;
+    padding: 48px 48px 56px;
+}
+
+.contact-us__content {
+    gap: 32px;
+    max-width: 975px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.contact-us__socials-title,
+.contact-us__form-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    margin-bottom: 24px;
+    color: var(--white);
+}
+
+.contact-us__socials-link {
+    display: flex;
+    gap: 16px;
+    color: var(--white);
+    text-decoration: none;
+    align-items: center;
+}
+
+.contact-us__form-fields {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 449px;
+    gap: 25px;
+}
+
+.contact-us__form-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.contact-us__form-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
 .footer {
-    padding-bottom: 83px;
+    padding-bottom: 58px;
 }
 
 .footer__items {
@@ -762,6 +975,7 @@ body {
     font-weight: 400;
     line-height: 19.2px;
     color: var(--white);
+    margin-bottom: 31px;
 }
 
 .footer__item-logo img {

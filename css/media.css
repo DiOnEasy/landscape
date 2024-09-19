@@ -13,11 +13,16 @@
     .unlock-value,
     .footer,
     .for-whom,
-    .loan {
+    .loan,
+    .metrics,
+    .cases,
+    .contact-us {
         padding-left: 16px;
         padding-right: 16px;
     }
 }
+
+
 
 @media (max-width: 1280px) {
     .how-works__items {
@@ -31,8 +36,7 @@
     .for-whom__item {
         padding: 32px;
         width: 100%;
-        height: 557px;
-
+        min-height: 557px;
     }
 
     .why-landscape__items {
@@ -41,16 +45,81 @@
 
     .borrowers__items {
         padding-right: 0;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
     }
 
     .numbers__items {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .cases__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:1200px) {
+    .borrowers__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .borrowers__link {
+        text-align: center;
+    }
+
+    .borrowers__line {
+        width: 40px;
+        height: 40px;
+    }
+
+    .borrowers__item .borrowers__line::after,
+    .borrowers__item:last-child .borrowers__line {
+        display: none;
+    }
+
+    .borrowers__item:first-child {
+        margin-bottom: 219px;
+    }
+
+    .borrowers__item:nth-child(2),
+    .borrowers__item:nth-child(3) {
+        margin-bottom: 133px;
+    }
+
+    .borrowers__item:nth-child(1) .borrowers__line,
+    .borrowers__item:nth-child(2) .borrowers__line,
+    .borrowers__item:nth-child(3) .borrowers__line {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -117px;
+    }
+
+    .borrowers__item:nth-child(1) .borrowers__line::before {
+        height: 188px;
+        top: -61px;
+    }
+
+    .borrowers__item:nth-child(1) {
+        max-width: 241px;
+    }
+
+    .borrowers__item:nth-child(2) {
+        max-width: 242px;
+    }
+
+    .borrowers__item:nth-child(3) {
+        max-width: 275px;
+    }
+
+    .borrowers__item:nth-child(4) {
+        max-width: 269;
+    }
 }
 
 @media (max-width:1024px) {
+
     .header {
         background-image: url(../img/mobile-bg.jpg);
         padding: 16px 16px 83px;
@@ -140,7 +209,10 @@
     .numbers__title,
     .trusted__title,
     .unlock-value__title,
-    .loan__title {
+    .loan__title,
+    .metrics__title,
+    .cases__title,
+    .contact-us__title {
         font-size: 32px;
         line-height: 38.4px;
         margin-bottom: 40px;
@@ -190,7 +262,36 @@
         line-height: 19.36px;
     }
 
+    .metrics__items {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
 
+    .metrics__item {
+        padding: 32px 62px 40px 32px;
+        gap: 24px;
+    }
+
+    .metrics__item-icon {
+        min-width: 56px;
+        max-width: 56px;
+        height: 56px;
+    }
+
+    .metrics__item-icon img {
+        width: 36px;
+    }
+
+    .metrics__item-title {
+        font-size: 24px;
+        line-height: 29.05px;
+    }
+
+    .metrics__item-text {
+        font-size: 24px;
+        line-height: 29.05px;
+    }
 
     .why-landscape__items {
         display: flex;
@@ -203,6 +304,13 @@
 
     .loan {
         margin-bottom: 72px;
+    }
+
+    .loan__items {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 24px 40px;
+        gap: 24px;
     }
 
     .loan__item-title {
@@ -252,6 +360,16 @@
     .investors__item-text {
         font-size: 16px;
         line-height: 19.36px;
+    }
+
+    .cases__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cases__item {
+        height: 275px;
+        padding-right: 32px;
     }
 
     .reviews {
@@ -333,6 +451,29 @@
         left: calc(50% - 415px/2 + 0.5px);
     }
 
+    .contact-us__content-wrapper {
+        padding: 32px 18px 48px;
+    }
+
+    .contact-us__content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-us__socials-link {
+        justify-content: center;
+    }
+
+    .contact-us__socials-link,
+    .contact-us__form-fields {
+        margin: 0 auto;
+    }
+
+    .footer {
+        padding-bottom: 255px;
+    }
+
     .footer__items .footer__item:nth-child(1) {
         padding-left: 18px;
     }
@@ -365,4 +506,58 @@
         padding: 13px 24px;
         text-wrap: nowrap;
     }
+}
+
+@media (max-width:640px) {
+    .loan__circle {
+        width: 1202.07px;
+        height: 1215.38px;
+        left: calc(50% - 1202.07px/2 + 638.57px);
+        top: -37px;
+        background: rgba(246, 91, 56, 0.4);
+    }
+
+    .borrowers__circle {
+        width: 380px;
+        height: 380px;
+        left: calc(50% - 380px/2 + 167px);
+        top: 441px;
+        background: rgba(246, 181, 56, 0.44);
+    }
+
+    .investors__circle {
+        width: 380px;
+        height: 380px;
+        left: calc(50% - 380px/2 + 178px);
+        top: 341px;
+        background: rgba(246, 91, 56, 0.44);
+    }
+
+    .cases__item {
+        height: 366px;
+    }
+
+    .unlock-value__links,
+    .header__content-links {
+        flex-direction: column;
+    }
+
+    .unlock-value {
+        padding: 105px 32px 36px;
+        margin-bottom: 104px;
+    }
+
+    .for-whom,
+    .metrics {
+        margin-bottom: 104px;
+    }
+
+    .borrowers {
+        margin-bottom: 40px;
+    }
+
+    .cases {
+        margin-bottom: 104px;
+    }
+
 }
